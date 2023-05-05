@@ -1,4 +1,5 @@
 import PokemonModel from './domain/PokemonModel'
+import LogRocket from 'logrocket';
 
 class RootStore {
     static type = {
@@ -6,6 +7,7 @@ class RootStore {
     }
 
     constructor() {
+        LogRocket.init('1jufuh/react-mvvm-pokemon');
         this.pokemonModel = new PokemonModel()
     }
 
